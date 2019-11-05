@@ -1,6 +1,6 @@
 # Homitag Player
 
-This project is a Spotify Player for HomiTag.
+This project is a Spotify Player for HomiTag. Here is a [live app](https://radiant-headland-04809.herokuapp.com/#) on the Heroku
 
 ## Available Scripts
 
