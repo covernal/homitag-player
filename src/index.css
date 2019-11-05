@@ -7,7 +7,52 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+#root {
+  margin: 50px;
+}
+
+.login {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #fff;
+  padding: 100px;
+}
+
+.login h1 {
+  margin: 20px;
+}
+
+.login button {
+  background: #007bff;
+  border: 1px solid #007bff;
+  color: white;
+}
+
+.login button:hover {
+  background: white;
+  border: 1px solid #007bff;
+  color: #007bff;
+}
+
+.spotify_card {
+  margin: 10px 5px;
+  width: 240px;
+  display: inline-block !important;
+}
+
+.spotify_card .btn {
+  float: right;
+}
+
+.poster {
+  margin: 10px 5px;
+  background: #f8f8f8;
+}
+.poster_thumb {
+  width: 64px;
+  height: 64px;
+  margin: 5px 10px 5px 5px;
 }
