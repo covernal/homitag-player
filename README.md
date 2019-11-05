@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Homitag Player
+
+This project is a Spotify Player for HomiTag.
 
 ## Available Scripts
 
