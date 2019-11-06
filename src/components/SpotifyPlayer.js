@@ -37,7 +37,7 @@ class SpotifyPlayer extends Component
   openPlaylist = playlist_id => {
     this.setState({
       pageId: 1,
-      playlist_id: playlist_id
+      playlist_id: playlist_id || this.state.playlist_id
     })
   }
 
