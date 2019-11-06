@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Button } from 'reactstrap';
 
+const override = css`
+  text-align: center;
+`;
 
 class Track extends Component
 {
@@ -47,8 +50,8 @@ class Track extends Component
             <h1 className="text-primary">
               {info.track.name}
             </h1>
-            <div>
-              <img className=""src={info.track.album.images[info.track.album.images.length - 1].url} />
+            <div css={override}>
+              <img src={info.track.album.images[0].url} />
             </div>
             <h3>Artists: {this.displayArtists(info.track.artists)}</h3>
             <h3>Album: {info.track.album.name}</h3>
