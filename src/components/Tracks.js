@@ -33,14 +33,6 @@ class Tracks extends Component
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    // const { PostActions } = this.props;
-
-    // if(this.props.number !== nextProps.number) {
-    //     PostActions.getPost(nextProps.number)
-    // }
-  }
-
   openPlaylists = () => {
     const { openPlaylists } = this.props;
     openPlaylists();

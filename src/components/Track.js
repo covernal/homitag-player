@@ -45,13 +45,13 @@ class Track extends Component
               <a className="text-secondary" href="#" onClick={this.openPlaylists}>&lt; Playlists</a> / <a className="text-secondary" href="#" onClick={this.openTrack}>Tracks</a>
             </h1>
             <h1 className="text-primary">
-              info.track.name
+              {info.track.name}
             </h1>
             <div>
               <img className=""src={info.track.album.images[info.track.album.images.length - 1].url} />
             </div>
             <h3>Artists: {this.displayArtists(info.track.artists)}</h3>
-            <h3>Album: {this.displayArtists(info.track.album.name)}</h3>
+            <h3>Album: {info.track.album.name}</h3>
             <h3>Duration: {this.displayDuration(info.track.duration_ms)}</h3>
           </Col>
         </Row>

@@ -30,14 +30,6 @@ class PlayLists extends Component
     }
   }
 
-  componentWillReceiveProps(nextProps) {
-    // const { PostActions } = this.props;
-
-    // if(this.props.number !== nextProps.number) {
-    //     PostActions.getPost(nextProps.number)
-    // }
-  }
-
   openPlaylist = (playlist_id) => {
     const { openPlaylist } = this.props;
     openPlaylist(playlist_id);
