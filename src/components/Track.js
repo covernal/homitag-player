@@ -9,22 +9,6 @@ class Track extends Component
     playlists: []
   }
 
-  componentDidMount() {
-    console.log('fetching url');
-    const { token, playlist_id, playlist } = this.props;
-    if (playlist_id !== playlist.id) {
-      this.props.tracksActions.getTracks(token, playlist_id);
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    // const { PostActions } = this.props;
-
-    // if(this.props.number !== nextProps.number) {
-    //     PostActions.getPost(nextProps.number)
-    // }
-  }
-
   openPlaylists = () => {
     const { openPlaylists } = this.props;
     openPlaylists();
