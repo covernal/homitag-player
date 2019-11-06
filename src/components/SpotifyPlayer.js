@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import SpotifyLogin from 'react-spotify-login';
 import PlayLists from './PlayLists';
 import Tracks from './Tracks';
+import Track from './Track';
 
 import { clientId, redirectUri } from '../settings';
 import * as spotifyActions from '../store/modules/spotify';
@@ -27,6 +28,12 @@ class SpotifyPlayer extends Component
     console.log(response);
   }
 
+  openPlaylists = () => {
+    this.setState({
+      pageId: 0
+    })
+  }
+
   openPlaylist = playlist_id => {
     this.setState({
       pageId: 1,
@@ -34,9 +41,10 @@ class SpotifyPlayer extends Component
     })
   }
 
-  openPlaylists = () => {
+  openTrack = track => {
     this.setState({
-      pageId: 0
+      pageId: 2,
+      track: track
     })
   }
 
@@ -64,7 +72,9 @@ class SpotifyPlayer extends Component
             if (this.state.pageId === 0) {
               return (<PlayLists openPlaylist={this.openPlaylist} />);
             } else if (this.state.pageId === 1) {
-              return (<Tracks playlist_id={this.state.playlist_id} openPlaylists={this.openPlaylists} />);
+              return (<Tracks playlist_id={this.state.playlist_id} openPlaylists={this.openPlaylists}  openTrack={this.openTrack}/>);
+            } else if (this.state.pageId === 2) {
+              return (<Tracks info={this.state.track} openPlaylists={this.openPlaylists} openPlaylists={this.openPlaylist} />);
             }
           })()
         )}

@@ -62,6 +62,12 @@ class Tracks extends Component
     return min + ":" + (sec < 10 ? '0' + sec : sec);
   }
 
+  openTrack = (info) => {
+    console.log(info)
+    const { openTrack } = this.props;
+    openTrack(info);
+  }
+
   render() {
     const { pending, error, playlist, tracks } = this.props;
     console.log(pending, error, playlist);
@@ -80,6 +86,7 @@ class Tracks extends Component
             <span>Artists: {this.displayArtists(info.track.artists)}</span><br/>
             <span>Duration: {this.displayDuration(info.track.duration_ms)}</span><br/>
             <span>Popularity: {info.track.popularity} </span><br/>
+            <div className="clearfix"><Button onClick={() => this.openTrack(info) }>Open</Button></div>
           </Media>
         </Media>
       ))
