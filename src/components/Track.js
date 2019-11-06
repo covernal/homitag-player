@@ -42,7 +42,7 @@ class Track extends Component
         <Row>
           <Col>
             <h1>
-              <a className="text-secondary" href="#" onClick={this.openPlaylists}>&lt; Playlists</a> / <a className="text-secondary" href="#" onClick={this.openTrack}>Tracks</a>
+              <a className="text-secondary" href="#" onClick={this.openPlaylists}>&lt; Playlists</a> / <a className="text-secondary" href="#" onClick={this.openTracks}>Tracks</a>
             </h1>
             <h1 className="text-primary">
               {info.track.name}
