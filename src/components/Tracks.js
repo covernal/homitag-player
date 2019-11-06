@@ -46,6 +46,12 @@ class Tracks extends Component
     openPlaylists();
   }
 
+  openTrack = (info) => {
+    console.log(info);
+    const { openTrack } = this.props;
+    openTrack(info);
+  }
+
   displayArtists = (artists) => {
     let result = '';
     for(let i = 0; i < artists.length; i++) {
@@ -60,12 +66,6 @@ class Tracks extends Component
     let min = Math.floor(sec / 60);
     sec = sec - min * 60;
     return min + ":" + (sec < 10 ? '0' + sec : sec);
-  }
-
-  openTrack = (info) => {
-    console.log(info)
-    const { openTrack } = this.props;
-    openTrack(info);
   }
 
   render() {

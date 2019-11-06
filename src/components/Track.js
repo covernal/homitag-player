@@ -52,6 +52,7 @@ class Track extends Component
   }
 
   render() {
+    const { info } = this.props;
     return (
       <Container fluid={true}>
         <Row>
