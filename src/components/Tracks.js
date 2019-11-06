@@ -46,6 +46,15 @@ class Tracks extends Component
     openPlaylists();
   }
 
+  displayArtists = (artists) => {
+    let result = '';
+    for(let i = 0; i < artists.length; i++) {
+      result += artists[i].name + ", ";
+    }
+
+    return result ==='' ? '' : result.slice(0, -2);
+  }
+
   displayDuration = (ms) => {
     let sec = Math.floor(ms / 1000);
     let min = Math.floor(sec / 60);
@@ -68,7 +77,9 @@ class Tracks extends Component
             <Media heading>
               {info.track.name}
             </Media>
-            Duration: {this.displayDuration(info.track.duration_ms)}
+            <span>Artists: {this.displayArtists(info.track.artists)}</span><br/>
+            <span>Duration: {this.displayDuration(info.track.duration_ms)}</span><br/>
+            <span>Popularity: {info.track.popularity} </span><br/>
           </Media>
         </Media>
       ))
