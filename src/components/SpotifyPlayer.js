@@ -74,7 +74,7 @@ class SpotifyPlayer extends Component
             } else if (this.state.pageId === 1) {
               return (<Tracks playlist_id={this.state.playlist_id} openPlaylists={this.openPlaylists}  openTrack={this.openTrack}/>);
             } else if (this.state.pageId === 2) {
-              return (<Tracks info={this.state.track} openPlaylists={this.openPlaylists} openPlaylists={this.openPlaylist} />);
+              return (<Track info={this.state.track} openPlaylists={this.openPlaylists} openPlaylists={this.openPlaylist} />);
             }
           })()
         )}
